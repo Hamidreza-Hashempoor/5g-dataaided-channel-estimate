@@ -5,35 +5,8 @@ This repository contains the code for the paper _Deep Learning Based Data-Assist
 
 ## Framework
 
-![image](./Figs/filtering_smoothing.png)
+![image](./Fig/whole_frame.jpg)
 
-## Demo (sequence generation and image imputation)
-
-
-<!--  ![Demo](./Figs/gen_sequence_genseq12.gif) -->
-*  Four irregular edges 
-<p align="center">
-  <img src="./Figs/gen_sequence_genseq12.gif" alt="Demo 1" width="45%" style="margin-right: 10px;">
-  <img src="./Figs/imputation_sequence_genseq12.gif" alt="Demo 2" width="45%">
-</p>
-
-*  Five irregular edges 
-<p align="center">
-  <img src="./Figs/gen_sequence_genseq16.gif" alt="Demo 3" width="45%" style="margin-right: 10px;">
-  <img src="./Figs/imputation_sequence_genseq16.gif" alt="Demo 4" width="45%">
-</p>
-
-*  Six irregular edges 
-<p align="center">
-  <img src="./Figs/gen_sequence_genseq20.gif" alt="Demo 5" width="45%" style="margin-right: 10px;">
-  <img src="./Figs/imputation_sequence_genseq20.gif" alt="Demo 6" width="45%">
-</p>
-
-*  Seven irregular edges 
-<p align="center">
-  <img src="./Figs/gen_sequence_genseq8.gif" alt="Demo 7" width="45%" style="margin-right: 10px;">
-  <img src="./Figs/imputation_sequence_genseq8.gif" alt="Demo 8" width="45%">
-</p>
 
 ## Requirements
 
@@ -44,9 +17,8 @@ $ pip install -r requirements.txt
 
 ## Code
 ### Data Preparation
-The data for single pendulum, double pendulum and irregular polygon experiments
-are synthetized as explained in details bellow. But we cannot share KITTI dataset because of their regulation. Please visit their [webpage](https://www.cvlibs.net/datasets/kitti/) 
-for further details.
+To generate channel.mat please use MATLAB. Check [here](https://www.cvlibs.net/datasets/kitti/](https://www.mathworks.com/help/5g/ref/nrtdlchannel-system-object.html).
+Details are explained there.
 
 For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
 Data generation `.py` files for single pendulum, double pendulum and irregular polygon experiments:
