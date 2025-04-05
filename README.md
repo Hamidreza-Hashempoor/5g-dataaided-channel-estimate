@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 
 ## Code
 ### Data Preparation
-To generate channel.mat please use MATLAB. Check [here](https://www.cvlibs.net/datasets/kitti/](https://www.mathworks.com/help/5g/ref/nrtdlchannel-system-object.html).
+To generate channel.mat please use MATLAB. Check [here](https://www.mathworks.com/help/5g/ref/nrtdlchannel-system-object.html).
 Details are explained there.
 
 For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
