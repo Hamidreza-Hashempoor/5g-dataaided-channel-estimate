@@ -1,4 +1,8 @@
 
+# Deep Learning Based Data-Assisted Channel Estimation and Detection
+This repository contains the code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
+
+
 <div align="center">
   <img src="./Fig/db_cls.jpg" alt="Image main" width="90%" style="margin: 1%;">
 	<p>
@@ -25,8 +29,6 @@ https://user-images.githubusercontent.com/2175271/136857714-1d2c8706-7f2f-449d-8
 </div>
 -->
 
-# Deep Learning Based Data-Assisted Channel Estimation and Detection
-This repository contains the code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
 
 ## Framework
 
