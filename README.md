@@ -2,7 +2,9 @@
 # An opensource repository for 5g channel estimation.
 
 <div align="center">
+<!-- 
 <h2>Deep Learning Based Data-Assisted Channel Estimation and Detection [link]</h2>
+-->
 
 [**Hamidreza Hashempoor**](https://sites.google.com/view/hamidrezahashempoor/home?authuser=3)<sup>1</sup> , [**Wan Choi**](http://wcisl.snu.ac.kr/professor.php)<sup>1&dagger;</sup>.
 
@@ -23,17 +25,9 @@
 
 <div align="center">
   <img src="./fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
-	<p>
-	</p>
-	<br/>
-
-
-
-<br/>
-<br/>
 </div>
 
-This repository provides a general open-source implementation of 5G wireless channel models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
+This repository provides a general open-source implementation of 5G wireless channel models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection [link]_. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
 
 <!--
 <div align="center">
