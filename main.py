@@ -113,7 +113,8 @@ def main(args):
             Lmmsemselist.append(LMMSEmse_total)
             LmmseBERlist.append(LmmseBER)
             
-            #conventional data aided config
+
+            # CONV DATA AIDED CONFIG
             CONVmse_total, CONVBER = CONV_DATA_AIDED_CONFIG(LSEstimatedData,
                                                             InsertedPilotDataMatrix,
                                                             ofdm_obj,
@@ -130,7 +131,7 @@ def main(args):
             ConvAidedmselist.append(CONVmse_total)
             ConvAidedBERlist.append(CONVBER)
 
-            ##channel tracking
+            ## CHANNEL TRACKING
             # interpolateChannel_LTAP_list, interpolatevalFdomain_list = CHANNEL_TRACKING(OFDMMappedTotal, 
             #     ofdm_obj,
             #     Realchennel_LTAP_reorder,
@@ -142,7 +143,7 @@ def main(args):
             #     SNRdb,
             #     args.ltap)
 
-            # #data aided config (torch)
+            ## TORCH DATA AIDED (torch)
             cvae_cls_mse_total, cvae_cls_ber_total, cvae_cls_mse_partial, cvae_cls_ber_partial = TORCH_DATA_AIDED(
                      LSEstimatedData, ## Can be replace with LMMSE estimated data
                      InsertedPilotDataMatrix,

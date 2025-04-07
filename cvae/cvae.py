@@ -3,13 +3,12 @@ import pandas as pd
 from pathlib import Path
 import pyro
 import pyro.distributions as dist
-from pyro.infer import SVI, Trace_ELBO, Predictive, RenyiELBO
-from torch.distributions.transforms import SigmoidTransform
+from pyro.infer import SVI, Predictive, RenyiELBO
 import torch
 import torch.nn as nn
 from tqdm import tqdm
 # from data import get_val_images
-from Dataloader.dataloader import CVAEBITS, get_val_images
+from Dataloader.dataloader import get_val_images
 import torch.nn.functional as F
 import copy
 
@@ -40,7 +39,7 @@ class Encoder(nn.Module):
         self.sp = nn.Softplus()
 
     def forward(self, x, y = None):
-        # put x and y together in the same image for simplification
+        # put x and y together in the same patch for simplification
         if (y ==None):
             x = x.view(-1, self.in_shape)
         if(y != None):
@@ -50,25 +49,10 @@ class Encoder(nn.Module):
         # then return a mean vector and a (positive) square root covariance
         # each of size batch_size x z_dim
         z_loc = self.fc21(hidden)
-        # z_scale = torch.exp(self.fc22(hidden))
         z_scale = self.sp(self.fc22(hidden)) + 1e-2
         if torch.isnan(z_loc[0][0] ):
             z = 2
         return z_loc, z_scale
-
-    # def __init__(self, in_shape, hidden_1, out_heads, out_len):
-    #     super().__init__()
-    #     self.in_shape = in_shape
-    #     self.fc1 = nn.Linear(in_shape, hidden_1)
-    #     self.heads = nn.ModuleList([nn.Linear(hidden_1, out_len) for _ in range(out_heads)])
-    #     self.relu = nn.ReLU()
-
-    # def forward(self, x):
-    #     x = x.view(-1, self.in_shape)
-    #     hidden = self.relu(self.fc1(x))
-    #     # [head(hidden) for head in self.heads]
-    #     # y = torch.sigmoid(self.fc2(hidden))
-    #     return [head(hidden) for head in self.heads]
 
 class Decoder(nn.Module):
     def __init__(self, z_dim, hidden_1, out_heads, out_len):
@@ -79,10 +63,7 @@ class Decoder(nn.Module):
         self.relu = nn.ReLU()
 
     def forward(self, z):     
-        # z = z.view(-1, self.in_shape)
         hidden = self.relu(self.fc1(z))
-        # [head(hidden) for head in self.heads]
-        # y = torch.sigmoid(self.fc2(hidden))
         return [F.softmax(head(hidden), dim = -1) for head in self.heads]
         # return [torch.sigmoid(head(hidden)) for head in self.heads]
     
@@ -97,8 +78,8 @@ class CVAE(nn.Module):
         # The CVAE is composed of multiple MLPs, such as recognition network
         # qφ(z|x, y), (conditional) prior network pθ(z|x), and generation
         # network pθ(y|x, z). Also, CVAE is built on top of the NN: not only
-        # the direct input x, but also the initial guess y_hat made by the NN
-        # are fed into the prior network.
+        # the direct input x, but also the initial guess y_hat (equalized symbols)
+        # made by the NN are fed into the recognition network.
         hidden_1 = 10
         self.baseline_net = pre_trained_baseline_net
         self.prior_net = Encoder(in_shape + out_len*out_heads, hidden_1, z_dim)
@@ -123,11 +104,6 @@ class CVAE(nn.Module):
             prior_loc, prior_scale = self.prior_net(xs + 1e-8, y_hat)
             ## the next line is for the time we dont want "z" be considered as a part of variational likelihood, i.e. p_{\theta}(z)
             zs = dist.Normal(prior_loc, prior_scale).sample()
-            ## the next line takes "z" into account for lower bount optimization, i.e. p_{\theta}(z)
-            # zs = pyro.sample('z', dist.Normal(prior_loc, prior_scale).to_event(1))
-            # zs = pyro.sample('z', dist.Normal(prior_loc, prior_scale).to_event(2))
-            # zs = pyro.sample('z', dist.TransformedDistribution(dist.Normal(prior_loc, prior_scale), SigmoidTransform()).to_event(1))
-
             # the output y is generated from the distribution pθ(y|x, z)
             loc = torch.stack(self.generation_net(zs), dim = 1)
             loc = torch.as_tensor(loc, dtype=torch.float32)
@@ -135,9 +111,7 @@ class CVAE(nn.Module):
                 
                 mask_loc = loc.view(batch_size, -1)
                 mask_ys = ys.view(batch_size, -1)
-                # y = pyro.sample('y',dist.Categorical(probs= loc, validate_args=False).to_event(1), obs = torch.as_tensor(torch.argmax(ys, dim=-1), dtype=torch.float32))
                 y = pyro.sample('y', dist.Bernoulli(probs= loc, validate_args=False).to_event(2), obs=ys)
-                # y = pyro.sample('y',dist.Categorical(probs= loc, validate_args=False).to_event(2), obs = torch.as_tensor(torch.argmax(ys, dim=-1), dtype=torch.float32))
             else:
                 # In testing, no need to sample: the output is already a
                 # probability in [0, 1] range.
@@ -151,7 +125,6 @@ class CVAE(nn.Module):
             if ys is None:
                 # at inference time, ys is not provided. In that case,
                 # the model uses the prior network
-                # y_hat = self.baseline_net(xs).view(xs.shape)
                 xs = torch.as_tensor(xs, dtype=torch.float32)
                 y_hat = torch.stack(self.baseline_net(xs), dim = 1)
                 loc, scale = self.prior_net(xs + 1e-8, y_hat)
@@ -160,13 +133,8 @@ class CVAE(nn.Module):
                 # q(z|x,y) = normal(loc(x,y),scale(x,y))
                 loc, scale = self.recognition_net(xs + 1e-8, ys)
 
-            ## the next line is for the time we dont want "z" be considered as a part of variational likelihood, i.e. q_{\phi}(z)
             h = dist.Normal(loc, scale).sample()
-            ## the next line takes "z" into account for lower bount optimization, i.e. q_{\phi}(z)
-            # h = pyro.sample("z", dist.Normal(loc, scale).to_event(1))
-            # h = pyro.sample("z", dist.Normal(loc, scale).to_event(1), infer={"is_auxiliary": True})
-            # h = pyro.sample("z", dist.TransformedDistribution(dist.Normal(loc + 1e-8, scale + 1e-8), SigmoidTransform()).to_event(1))
-
+            
     def save(self, model_path):
         torch.save({
             'prior': self.prior_net.state_dict(),
@@ -267,9 +235,6 @@ def train(in_shape, out_heads, out_len, z_dim, results_file, device, dataloaders
     cvae_net.load(model_path)
 
     # record evolution
-    # samples = pd.concat(samples, axis=0, ignore_index=True)
-    # samples.to_csv('samples.csv', index=False)
-
     losses = pd.concat(losses, axis=0, ignore_index=True)
     losses.to_csv('losses.csv', index=False)
 

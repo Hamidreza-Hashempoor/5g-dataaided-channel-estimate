@@ -18,8 +18,6 @@ class BaselineNet(nn.Module):
     def forward(self, x):
         x = x.view(-1, self.in_shape)
         hidden = self.relu(self.fc1(x))
-        # [head(hidden) for head in self.heads]
-        # y = torch.sigmoid(self.fc2(hidden))
         return [self.relu(head(hidden)) for head in self.heads]
 
 
