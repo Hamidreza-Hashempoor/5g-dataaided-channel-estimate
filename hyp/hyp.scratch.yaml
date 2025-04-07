@@ -1,18 +1,17 @@
 # Hyperparameters for data aided channel estimation training from scratch
 
-# python train.py --batch 40 --cfg yolov5m.yaml --weights '' --data coco.yaml --img 640 --epochs 300
 
 
 
 subcarriers: 256  # number of subcarriers
 cp: 30  # cyclic prefix
 ltap: 12  # number of channel taps in time domain 
-snrlist: [  -15, -10, -5, 0, 5,10]  # list of snrs
+snrlist: [-15, -10, -5, 0, 5,10]  # list of snrs
 ues: 2  # number of users
 bss: 4  # number of base stations
-timesamplelist: [2,4, 5,10]  # time samples
+timesamplelist: [2, 4, 5, 10]  # time samples
 ofdmsymbols: 12  # number of ofdm symbols in time domain (sampling based on this)
-datadir: './channel_201_2_4.mat'  # channel data dir
+datadir: './channel.mat'  # channel data dir
 modscheme: 'QAM'  # modulation scheme
 repetition: 2  # repetition for error handling
 zdim: 20  # latent variable dimension
