@@ -19,6 +19,32 @@ $ pip install -r requirements.txt
 ### Data Preparation
 To generate channel.mat please use MATLAB. Check [here](https://www.etsi.org/deliver/etsi_tr/138900_138999/138900/14.02.00_60/tr_138900v140200p.pdf) for more details. 
 
+### Command-line Arguments
+| Argument         | Type     | Default        | Description                                                                 |
+|------------------|----------|----------------|-----------------------------------------------------------------------------|
+| `--datadir`      | `str`    | **(required)** | Path to the channel data.                                                   |
+| `--hyp`          | `str`    | `"hyp/hyp.scratch.yaml"` | Path to the hyper parameters.                                                   |
+| `--ues`          | `int`    | `2`            | Number of UEs                                                               |
+| `--bss`          | `int`    | `4`            | Number of BSs                                                               |
+| `--zdim`         | `int`    | `20`           | Latent variable dimension                                                   |
+| `--datadir`      | `str`    | **(required)** | Path to the channel data.                                                   |
+| `--cp`           | `int`    | `30`           | Cyclic prefix len.                            |
+| `--subcarriers`  | `int`    | `256`          | Subcariers should be 128-256.                            |
+| `--ltap`         | `int`    | `12`           | Number of TDL channel taps.                            |
+| `--snrlist`      | `list`   | `[  -15, -10, -5, 0, 5,10]` | SNR list in experiments.                            |
+| `--timesamplelist`| `list`  | `[  2, 4, 5,10]`| Pilot insertion intervals.                            |
+| `--ofdmsymbols`  | `int`    | `21`           | Number of OFDM symbols (or time slots `T`).                                 |
+| `--modscheme`    | `str`    | `QAM`          | Modulation scheme.                                  |
+| `--repetition`   | `int`    | `1`            | Uses repetition coding if set `>1`                                          |
+| `--num-epochs`   | `int`    | `50`           | Epochs                                          |
+| `--esp`          | `int`    | `100`          | Early stop                                          |
+| `--lr`           | `int`    | `1.0e-4`       | Learning rate                                          |
+| `--save-dir  `   | `str`    | `""`             | Saving directory.                                     |
+| `--name`         | `str`    | `'exp'`          | Add the name of current seed.       |
+| `--project`      | `str`    | `'runs'`         | Add the name of project.       |
+
+
+
 
 For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
 Data generation `.py` files for single pendulum, double pendulum and irregular polygon experiments:
