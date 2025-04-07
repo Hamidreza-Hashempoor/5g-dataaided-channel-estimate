@@ -53,7 +53,6 @@ To generate channel.mat please use MATLAB. Check [here](https://www.etsi.org/del
 | `--ues`          | `int`    | `2`            | Number of UEs                                                               |
 | `--bss`          | `int`    | `4`            | Number of BSs                                                               |
 | `--zdim`         | `int`    | `20`           | Latent variable dimension                                                   |
-| `--datadir`      | `str`    | **(required)** | Path to the channel data.                                                   |
 | `--cp`           | `int`    | `30`           | Cyclic prefix len.                            |
 | `--subcarriers`  | `int`    | `256`          | Subcariers should be 128-256.                            |
 | `--ltap`         | `int`    | `12`           | Number of TDL channel taps.                            |
