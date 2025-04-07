@@ -1,6 +1,24 @@
 
 # An opensource repository for 5g channel estimation.
-The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
+
+<div align="center">
+<h2>Deep Learning Based Data-Assisted Channel Estimation and Detection [link]</h2>
+
+[**Hamidreza Hashempoor**](https://sites.google.com/view/hamidrezahashempoor/home?authuser=3)<sup>1</sup> , [**Wan Choi**](http://wcisl.snu.ac.kr/professor.php)<sup>1&dagger;</sup>.
+
+<sup>1</sup>Seoul National University&emsp;
+
+&dagger;corresponding author
+
+**TMLCN 2025**
+
+
+[![Pyro](https://img.shields.io/badge/Pyro-1.8.6-blue)](https://pyro.ai/)
+[![Python Version: 3.8+](https://img.shields.io/badge/python-3.8%2B-green)](https://www.python.org/downloads/release/python-380/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://en.wikipedia.org/wiki/MIT_License)
+
+</div>
+
 
 
 <div align="center">
@@ -9,9 +27,6 @@ The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and
 	</p>
 	<br/>
 
-[![Pyro](https://img.shields.io/badge/Pyro-1.8.6-blue)](https://pyro.ai/)
-[![Python Version: 3.8+](https://img.shields.io/badge/python-3.8%2B-green)](https://www.python.org/downloads/release/python-380/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://en.wikipedia.org/wiki/MIT_License)
 
 
 <br/>
