@@ -1,6 +1,6 @@
 
 <div align="center">
-	<img src="https://socceraction.readthedocs.io/en/latest/_static/logo_white.png" height="200">
+  <img src="./Fig/db_cls.jpg" alt="Image main" width="90%" style="margin: 1%;">
 	<p>
 	<b>An opensource repository for 5g channel estimation.</b>
 	</p>
@@ -90,10 +90,10 @@ To achieve results in the paper add convolutional coding scheme. Check [these](h
 * BER-SNR and MSE-SNR for 16 and 64 QAM
 
 <p align="center">
-  <img src="./Figs/image1.gif" alt="Image 1" width="23%" style="margin: 1%;">
-  <img src="./Figs/image2.gif" alt="Image 2" width="23%" style="margin: 1%;">
-  <img src="./Figs/image3.gif" alt="Image 3" width="23%" style="margin: 1%;">
-  <img src="./Figs/image4.gif" alt="Image 4" width="23%" style="margin: 1%;">
+  <img src="./Fig/SNRBER16.jpg" alt="Image 1" width="23%" style="margin: 1%;">
+  <img src="./Fig/SNRBER64.jpg" alt="Image 2" width="23%" style="margin: 1%;">
+  <img src="./Fig/SNRMSE16.jpg" alt="Image 3" width="23%" style="margin: 1%;">
+  <img src="./Fig/SNRMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
 </p>
 
 ### Contribution
