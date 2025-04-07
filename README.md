@@ -4,7 +4,7 @@ The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and
 
 
 <div align="center">
-  <img src="./Fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
+  <img src="./fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
 	<p>
 	</p>
 	<br/>
@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/2175271/136857714-1d2c8706-7f2f-449d-8
 
 ## Framework
 
-![image](./Fig/whole_frame.jpg)
+![image](./fig/whole_frame.jpg)
 
 
 ## Requirements
@@ -90,10 +90,10 @@ To achieve results in the paper add convolutional coding scheme. Check [these](h
 * BER-SNR and MSE-SNR for 16 and 64 QAM
 
 <p align="center">
-  <img src="./Fig/SNRBER16.jpg" alt="Image 1" width="23%" style="margin: 1%;">
-  <img src="./Fig/SNRBER64.jpg" alt="Image 2" width="23%" style="margin: 1%;">
-  <img src="./Fig/SNRMSE16.jpg" alt="Image 3" width="23%" style="margin: 1%;">
-  <img src="./Fig/SNRMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
+  <img src="./fig/SNRBER16.jpg" alt="Image 1" width="23%" style="margin: 1%;">
+  <img src="./fig/SNRBER64.jpg" alt="Image 2" width="23%" style="margin: 1%;">
+  <img src="./fig/SNRMSE16.jpg" alt="Image 3" width="23%" style="margin: 1%;">
+  <img src="./fig/SNRMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
 </p>
 
 ### Contribution
