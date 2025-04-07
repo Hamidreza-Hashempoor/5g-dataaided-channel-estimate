@@ -1,12 +1,11 @@
 
-# Deep Learning Based Data-Assisted Channel Estimation and Detection
+# An opensource repository for 5g channel estimation.
 The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
 
 
 <div align="center">
   <img src="./Fig/db_cls.jpg" alt="Image main" width="50%" style="margin: 1%;">
 	<p>
-	<b>An opensource repository for 5g channel estimation.</b>
 	</p>
 	<br/>
 
