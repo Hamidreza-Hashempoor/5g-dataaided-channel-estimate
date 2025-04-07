@@ -4,7 +4,7 @@ This repository contains the code for the paper _Deep Learning Based Data-Assist
 
 
 <div align="center">
-  <img src="./Fig/db_cls.jpg" alt="Image main" width="40%" style="margin: 1%;">
+  <img src="./Fig/db_cls.jpg" alt="Image main" width="50%" style="margin: 1%;">
 	<p>
 	<b>An opensource repository for 5g channel estimation.</b>
 	</p>
