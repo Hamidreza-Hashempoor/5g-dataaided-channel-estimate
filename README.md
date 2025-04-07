@@ -1,4 +1,29 @@
 
+<div align="center">
+	<img src="https://socceraction.readthedocs.io/en/latest/_static/logo_white.png" height="200">
+	<p>
+	<b>An opensource repository for 5g channel estimation.</b>
+	</p>
+	<br/>
+
+[![Pyro](https://img.shields.io/badge/Pyro-1.8.6-blue)](https://pyro.ai/)
+[![Python Version: 3.8+](https://img.shields.io/badge/python-3.8%2B-green)](https://www.python.org/downloads/release/python-380/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://en.wikipedia.org/wiki/MIT_License)
+
+
+<br/>
+<br/>
+</div>
+
+This repository provides a general open-source implementation of 5G wireless channel models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
+
+<!--
+<div align="center">
+
+https://user-images.githubusercontent.com/2175271/136857714-1d2c8706-7f2f-449d-818f-0e67fbb75400.mp4
+
+</div>
+-->
 
 # Deep Learning Based Data-Assisted Channel Estimation and Detection
 This repository contains the code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
