@@ -4,7 +4,7 @@ The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and
 
 
 <div align="center">
-  <img src="./Fig/db_cls.jpg" alt="Image main" width="50%" style="margin: 1%;">
+  <img src="./Fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
 	<p>
 	</p>
 	<br/>
@@ -18,7 +18,7 @@ The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and
 <br/>
 </div>
 
-This repository provides a general open-source implementation of 5G wireless channel models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
+This repository provides a general open-source implementation of 5G wireless channel models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
 
 <!--
 <div align="center">
