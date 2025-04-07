@@ -1,6 +1,6 @@
 
 # Deep Learning Based Data-Assisted Channel Estimation and Detection
-This repository contains the code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
+The code for the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_
 
 
 <div align="center">
