@@ -17,8 +17,8 @@ $ pip install -r requirements.txt
 
 ## Code
 ### Data Preparation
-To generate channel.mat please use MATLAB. Check [here](https://www.mathworks.com/help/5g/ref/nrtdlchannel-system-object.html).
-Details are explained there.
+To generate channel.mat please use MATLAB. Check [here](https://www.etsi.org/deliver/etsi_tr/138900_138999/138900/14.02.00_60/tr_138900v140200p.pdf) for more details. 
+
 
 For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
 Data generation `.py` files for single pendulum, double pendulum and irregular polygon experiments:
