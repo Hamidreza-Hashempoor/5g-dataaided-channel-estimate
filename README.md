@@ -48,8 +48,8 @@ To generate channel.mat please use MATLAB. Check [here](https://www.etsi.org/del
 ### Command-line Arguments
 | Argument         | Type     | Default        | Description                                                                 |
 |------------------|----------|----------------|-----------------------------------------------------------------------------|
-| `--datadir`      | `str`    | ‍‍‍‍`"./channel.mat"` | Path to the channel data.                                                   |
-| `--hyp`          | `str`    | `"hyp/hyp.scratch.yaml"` | Path to the hyper parameters.                                                   |
+| `--datadir`      | `str`    | ‍‍‍‍`'./channel.mat'` | Path to the channel data.                                                   |
+| `--hyp`          | `str`    | `'hyp/hyp.scratch.yaml'` | Path to the hyper parameters.                                                   |
 | `--ues`          | `int`    | `2`            | Number of UEs                                                               |
 | `--bss`          | `int`    | `4`            | Number of BSs                                                               |
 | `--zdim`         | `int`    | `20`           | Latent variable dimension                                                   |
