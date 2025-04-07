@@ -46,78 +46,36 @@ To generate channel.mat please use MATLAB. Check [here](https://www.etsi.org/del
 
 
 
-For simplicity, we are calling data generation modules in the ``main_script`` so can skip the data generation section.
-Data generation `.py` files for single pendulum, double pendulum and irregular polygon experiments:
-
->   * project dir
->     * double pendulum image imputation
->       * `DoublePendulum.py`
->     * double pendulum state estimation
->       * `DoublePendulum.py`
->     * pendulum image imputation
->       * `PendulumData.py`
->     * pendulum state estimation
->       * `PendulumData.py`
->     * polybox image imputation
->       * PolyboxData.py
->       * PymunkData.py
->     * polybox state estimation
->       * PolyboxData.py
->       * PymunkData.py
-
-
 ### Experiments
-If you just want run the experiments, you can directly run the ``main_script`` of each experiment as follow:
-* double_pendulum image imputation
- ```
-cd double pendulum image imputation
-python double_pendulum_image_imputation.py --config config0.json
-cd ..
+If you want run the experiments, you can directly run the ``main.py``. Each experiment config is commented in the `main` function as follow:
+* CONVENTIONAL_CONFIG
+* CONV_DATA_AIDED_CONFIG
+* CHANNEL_TRACKING
+* TORCH_DATA_AIDED
+  
+  - **Train example**:
 ```
-After running the code, dataset will be generated in `double pendulum image imputation/data` folder and the results are saved at 
-`double pendulum image imputation/results`
+python --datadir "/channel.mat" --hyp "hyp/hyp.scratch.yaml" --name "seed-0" --project "runs"
+```
+After running the code, results will be saved in `runs/seed-0` folder and the models are saved at the working directory.
 
-* double pendulum state estimation
- ```
-cd double pendulum state estimation
-python double_pendulum_state_estimation.py --config config0.json
-cd ..
-```
-After running the code, dataset will be generated in `double pendulum state estimation/data` folder and the results are saved at 
-`double pendulum state estimation/results`
+### Results
+To achieve results in the paper add convolutional coding scheme. Check [these](https://www.mathworks.com/help/comm/ref/convenc.html) examples. 
 
-* pendulum image imputation
- ```
-cd pendulum image imputation
-python pendulum_image_imputation.py --config config.json
-cd ..
-```
-After running the code, dataset will be generated in `pendulum image imputation/data` folder and the results are saved at 
-`pendulum image imputation/results`
+* BER-SNR and MSE-SNR for 16 and 64 QAM
 
-* pendulum state estimation
- ```
-cd pendulum state estimation
-python pendulum_state_estimation.py --config config.json
-cd ..
-```
-After running the code, dataset will be generated in `pendulum state estimation/data` folder and the results are saved at 
-`pendulum state estimation/results`
+<p align="center">
+  <img src="./Figs/image1.gif" alt="Image 1" width="23%" style="margin: 1%;">
+  <img src="./Figs/image2.gif" alt="Image 2" width="23%" style="margin: 1%;">
+  <img src="./Figs/image3.gif" alt="Image 3" width="23%" style="margin: 1%;">
+  <img src="./Figs/image4.gif" alt="Image 4" width="23%" style="margin: 1%;">
+</p>
 
-* polybox image imputation
- ```
-cd polybox image imputation
-python polybox_image_imputation.py --config config.json
-cd ..
-```
-After running the code, dataset will be generated in `polybox image imputation/data` folder and the results are saved at 
-`polybox image imputation/results`
+### Contribution
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. However, be aware that socceraction is not actively developed. It's primary use is to enable reproducibility of our research. If you believe there is a feature missing, feel free to raise a feature request, but please do be aware that the overwhelming likelihood is that your feature request will not be accepted. To learn more on how to contribute, see the Contributor Guide.
 
-* polybox state estimation
- ```polybox_state_estimation.py
-cd polybox state estimation
-python polybox_state_estimation.py --config config.json
-cd ..
-```
-After running the code, dataset will be generated in `polybox state estimation/data` folder and the results are saved at 
-`polybox state estimation/results`
+### License
+Distributed under the terms of the MIT license, socceraction is free and open source software. Although not strictly required, we appreciate it if you include a link to this repo or cite our research in your work if you make use of socceraction.
+
+### Research and Cite
+If you make use of this repository in your research or find it useful, please consider citing it: [to be updated]
