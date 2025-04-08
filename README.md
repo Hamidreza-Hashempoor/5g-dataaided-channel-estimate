@@ -105,6 +105,19 @@ To achieve results in the paper add convolutional coding scheme. Check [these](h
   <img src="./fig/SNRMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
 </p>
 
+* BER-RB and MSE-RB for 16 and 64 QAM
+
+<p align="center">
+  <img src="./fig/RBBER16.jpg" alt="Image 1" width="23%" style="margin: 1%;">
+  <img src="./fig/RBBER64.jpg" alt="Image 2" width="23%" style="margin: 1%;">
+  <img src="./fig/RBMSE16.jpg" alt="Image 3" width="23%" style="margin: 1%;">
+  <img src="./fig/RBMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
+</p>
+
+### Fancy plots
+If you're interested in the plots used in the manuscripts, we've included code snippets to help you generate similar ones.
+Please refer to the `plotMAIN.ipynb` and `plotRB.ipynb` notebooks in the `fancy_plot` folder.
+
 ### Contribution
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. If you believe there is a feature missing, feel free to raise a feature request. To learn more on how to contribute, see the Contributor Guide.
 
