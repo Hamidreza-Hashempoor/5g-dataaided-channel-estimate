@@ -6,9 +6,9 @@
 <h2>Deep Learning Based Data-Assisted Channel Estimation and Detection [link]</h2>
 -->
 
-[**Hamidreza Hashempoor**](https://sites.google.com/view/hamidrezahashempoor/home?authuser=3)<sup>1</sup> , [**Wan Choi**](http://wcisl.snu.ac.kr/professor.php)<sup>1&dagger;</sup>.
+[**Hamidreza Hashempoor**](https://hamidreza-hashempoor.github.io/)<sup>1</sup> , [**Wan Choi**](http://wcisl.snu.ac.kr/professor.php)<sup>1&dagger;</sup>.
 
-<sup>1</sup>Seoul National University&emsp;
+<sup>1</sup>Seoul National University
 
 &dagger;corresponding author
 
