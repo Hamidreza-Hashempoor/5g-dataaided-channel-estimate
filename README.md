@@ -1,5 +1,5 @@
 
-# An opensource repository for 5g channel estimation.
+# Opensource Repository for 5G Channel Estimation and Data Detection
 
 <div align="center">
 <!-- 
