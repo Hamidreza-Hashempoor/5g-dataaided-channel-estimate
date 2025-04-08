@@ -114,15 +114,15 @@ To achieve results in the paper add convolutional coding scheme. Check [these](h
   <img src="./fig/RBMSE64.jpg" alt="Image 4" width="23%" style="margin: 1%;">
 </p>
 
-### Fancy plots
+## Fancy plots
 If you're interested in the plots used in the manuscripts, we've included code snippets to help you generate similar ones.
 Please refer to the `plotMAIN.ipynb` and `plotRB.ipynb` notebooks in the `fancy_plot` folder.
 
-### Contribution
+## Contribution
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. If you believe there is a feature missing, feel free to raise a feature request. To learn more on how to contribute, see the Contributor Guide.
 
-### License
+## License
 Distributed under the terms of the MIT license, socceraction is free and open source software. Although not strictly required, we appreciate it if you include a link to this repo or cite our research in your work if you make use of socceraction.
 
-### Research and Cite
+## Research and Cite
 If you make use of this repository in your research or find it useful, please consider citing it: [to be updated]
