@@ -27,7 +27,7 @@
   <img src="./fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
 </div>
 
-This repository provides a general open-source implementation of 5G wireless channel estimation and data detection models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection [link]_. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
+This repository provides a general open-source implementation of 5G wireless channel estimation and data detection models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection [[paper link](https://ieeexplore.ieee.org/document/10960353)]. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
 
 <!--
 <div align="center">
