@@ -124,5 +124,16 @@ All contributions, bug reports, bug fixes, documentation improvements, enhanceme
 ## License
 Distributed under the terms of the MIT license, socceraction is free and open source software. Although not strictly required, we appreciate it if you include a link to this repo or cite our research in your work if you make use of socceraction.
 
-## Research and Cite
-If you make use of this repository in your research or find it useful, please consider citing it: [to be updated]
+## Research and Citation
+If you make use of this repository in your research or find it useful, please consider citing it: 
+```
+@article{hashempoor2025deep,
+  title={Deep Learning Based Data-Assisted Channel Estimation and Detection},
+  author={Hashempoor, Hamidreza and Choi, Wan},
+  journal={IEEE Transactions on Machine Learning in Communications and Networking},
+  number={99},
+  pages={1--1},
+  year={2025},
+  publisher={IEEE}
+}
+```
