@@ -127,13 +127,14 @@ Distributed under the terms of the MIT license, socceraction is free and open so
 ## Research and Citation
 If you make use of this repository in your research or find it useful, please consider citing it: 
 ```
-@article{hashempoor2025deep,
-  title={Deep Learning Based Data-Assisted Channel Estimation and Detection},
+@ARTICLE{10960353,
   author={Hashempoor, Hamidreza and Choi, Wan},
-  journal={IEEE Transactions on Machine Learning in Communications and Networking},
-  number={99},
-  pages={1--1},
+  journal={IEEE Transactions on Machine Learning in Communications and Networking}, 
+  title={Deep Learning-Based Data-Assisted Channel Estimation and Detection}, 
   year={2025},
-  publisher={IEEE}
-}
+  volume={3},
+  number={},
+  pages={534-551},
+  keywords={Channel estimation;Symbols;Noise reduction;Training;Iterative methods;Estimation;Artificial neural networks;Accuracy;Iterative decoding;Deep learning;Channel estimation;deep neural networks (DNNs);variational inference},
+  doi={10.1109/TMLCN.2025.3559472}}
 ```
