@@ -27,7 +27,25 @@
   <img src="./fig/simple_str.jpg" alt="Image main" width="50%" style="margin: 1%;">
 </div>
 
-This repository provides a general open-source implementation of 5G wireless channel estimation and data detection models in MIMO OFDM framework. It includes conventional baselines, variational approaches, and data-aided methods along with the core idea of the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_ [[paper link](https://ieeexplore.ieee.org/document/10960353)]. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
+This repository provides a general open-source implementation of 5G wireless channel estimation and data detection models in MIMO OFDM framework. It includes conventional baselines, variational approach@ARTICLE{10960353,
+
+  author={Hashempoor, Hamidreza and Choi, Wan},
+
+  journal={IEEE Transactions on Machine Learning in Communications and Networking}, 
+
+  title={Deep Learning-Based Data-Assisted Channel Estimation and Detection}, 
+
+  year={2025},
+
+  volume={3},
+
+  number={},
+
+  pages={534-551},
+
+  keywords={Channel estimation;Symbols;Noise reduction;Training;Iterative methods;Estimation;Artificial neural networks;Accuracy;Iterative decoding;Deep learning;Channel estimation;deep neural networks (DNNs);variational inference},
+
+  doi={10.1109/TMLCN.2025.3559472}}es, and data-aided methods along with the core idea of the paper _Deep Learning Based Data-Assisted Channel Estimation and Detection_ [[paper link](https://ieeexplore.ieee.org/document/10960353)]. With user-defined configuration of MIMO systems, this framework offers an accessible and flexible foundation for researchers to build upon.
 
 <!--
 <div align="center">
@@ -136,5 +154,6 @@ If you make use of this repository in your research or find it useful, please co
   number={},
   pages={534-551},
   keywords={Channel estimation;Symbols;Noise reduction;Training;Iterative methods;Estimation;Artificial neural networks;Accuracy;Iterative decoding;Deep learning;Channel estimation;deep neural networks (DNNs);variational inference},
-  doi={10.1109/TMLCN.2025.3559472}}
+  doi={10.1109/TMLCN.2025.3559472}
+}
 ```
